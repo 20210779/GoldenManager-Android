@@ -1,6 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GoldenManagerV10" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="App.Theme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="android:navigationBarColor" tools:targetApi="1">?attr/colorPrimaryVariant</item>
 
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
@@ -9,5 +11,7 @@
     <style name="Theme.GoldenManagerV10" parent="Base.Theme.GoldenManagerV10" />
     <style name="Splashtheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="android:navigationBarColor" tools:targetApi="1">?attr/colorPrimaryVariant</item>
     </style>
 </resources>

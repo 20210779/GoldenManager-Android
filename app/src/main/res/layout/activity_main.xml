@@ -4,15 +4,166 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whitegreen"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/top_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/fondo_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"/>
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/opensans"
+        android:text="GOLDEN MANAGER"
+        android:textColor="@color/golden"
+        android:textSize="30dp"
+        android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="25dp"
+        android:visibility="invisible"
+        app:cardElevation="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:textSize="30dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Iniciar sesion"/>
+
+
+            
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/txtEmail"
+                android:background="@drawable/txttext_background"
+                android:layout_marginTop="20dp"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:textSize="15dp"
+                android:fontFamily="@font/sans_bold"
+                android:textColorHint="@color/green"
+                android:drawableStart="@drawable/arrobai"
+                android:paddingStart="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/txtPassword"
+                android:textSize="15dp"
+                android:background="@drawable/txttext_background"
+                android:layout_marginTop="15dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:fontFamily="@font/sans_bold"
+                android:textColorHint="@color/green"
+                android:drawableStart="@drawable/candado"
+                android:paddingStart="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:id="@+id/btnRemenber"
+                android:layout_marginStart="9dp"
+                android:textColor="@color/yellowbrown"
+                android:textSize="10dp"
+                android:textStyle="normal"
+                android:background="@color/white"
+                android:text="Recuerdame"/>
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="290dp"
+                android:id="@+id/btnLogin"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/boton_background"
+                android:text="Iniciar sesion"
+                android:textColor="@color/white"
+                android:textSize="21dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:id="@+id/btnForgot"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sans_bold"
+                android:background="@color/white"
+                android:text="Olvidaste tu contraseña?"
+                android:textColor="@color/orange"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="58dp"
+        app:cardElevation="22dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background">
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo_sin_nombre"
+                android:scaleType="centerInside"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
